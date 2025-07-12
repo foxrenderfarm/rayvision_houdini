@@ -23,7 +23,7 @@ api = RayvisionAPI(access_id=render_para['access_id'],
 
 # Step1:Analyze CG File
 analyze_info = {
-    "cg_file": r"D:\files\CG FILE\flip_test_slice4.hip",
+    "cg_file": r"D:\houdini\CG file\flip_test_slice4.hip",
     "workspace": "c:/workspace",
     "software_version": "17.5.293",
     "project_name": "Project1",
@@ -43,15 +43,10 @@ update_task = {
 }
 update_task_info(update_task, analyze_obj.task_json)
 
-custom_info_to_task = {
-    "env": "houdini_env"
-}
+custom_info_to_task = {}
 append_to_task(custom_info_to_task, analyze_obj.task_json)
 
-custom_info_to_upload = [
-    r"D:\files\CG FILE\Shark Test\home_test.build",
-    r"C:\workspace\1585303109\task.json"
-]
+custom_info_to_upload = []
 append_to_upload(custom_info_to_upload, analyze_obj.upload_json)
 
 # Step3: Set platform hardware configuration information
